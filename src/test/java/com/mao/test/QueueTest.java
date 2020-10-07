@@ -22,7 +22,11 @@ public class QueueTest {
     测试消息队列
      */
     @Test
-    public void test1(){
-        this.provider.send("Hello World msg");
+    public void test1()throws Exception{
+        while(true){
+            Thread.sleep(1000);
+            this.provider.send("Hello World msg");
+        }
+
     }
 }
